@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.description }}">
+    <meta name="author" content="">
+
+    {% styles %}
+    <link href="{{ [
+        'assets/vendor/bootstrap/dist/css/bootstrap.min.css',
+        'assets/vendor/bootstrap-material-design/dist/css/bootstrap-material-design.min.css',
+        'assets/vendor/bootstrap-material-design/dist/css/ripples.min.css',
+    ]|theme }}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+{% page %}
+
+<script src="{{ [
+            '@jquery',
+            'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+            'assets/vendor/bootstrap-material-design/dist/js/material.min.js',
+            'assets/vendor/bootstrap-material-design/dist/js/ripples.min.js',
+            'assets/js/script.js',
+        ]|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+</body>
+</html>
